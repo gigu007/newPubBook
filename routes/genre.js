@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const upload = require('../controllers/genres')
-router.post('/upload', upload)
+const {createGenre,getAllGenres,getGenre} = require('../controllers/genres')
+router.route('/').post(createGenre).get(getAllGenres).get(getGenre)
+
 
 
 module.exports = router

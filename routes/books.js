@@ -6,6 +6,6 @@ const{
     createBook
 }=require('../controllers/books');
 
-router.route('/').post(createBook).get(getAllBooks)
-router.route('/:id').get(getBook)
+router.route('/').get(getAllBooks)
+router.route('/:id').get(getBook).post(createBook)
 module.exports=router;
